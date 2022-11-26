@@ -1,9 +1,23 @@
 <!DOCTYPE HTML> 
 <html>
-  <head>
+  <head> <script>
     <title> Lesson Request Form </title>
-      
-  </head>
+    function calcTotal()
+    {
+      numberLessons = parseInt(document.getElementById("numberLessons").value);
+      if (document.getElementById("private").checked==true)
+      {
+        total = numberLessons * 60;
+      }
+      else
+      {
+        total = numberLessons * 20;
+      }
+      str = "Total is $" + total + ".";
+      document.getElementById("total").innerHTML = str;
+    }
+  </script>
+  </head> 
   
   <body>
     <table border=1>
@@ -65,8 +79,8 @@
         </tr>
         <tr>
           <td> Lesson Type: </td>
-          <td> <input type="radio" name="lessontype" /> Private <br />
-               <input type="radio" name="lessontype" /> Group <br /> 
+          <td> <input type="radio" id="private" name="lessontype" /> Private <br />
+               <input type="radio" id="group" name="lessontype" /> Group <br /> 
           </td>
         </tr>
         <tr>
@@ -74,6 +88,16 @@
           <td> <input type="text" id="discountcode" name="discountcode" /> </td>
         </tr>
         
+        <tr>
+          <td> Number of lessons requesting: </td>
+          <td> <input type="text" id="numberLessons"  name="numberLessons" /> </td>
+        </tr>
+    
+        <tr>
+            <td> <input type="button" value="Calculate" onclick="calcTotal();" /></td>
+            <td> <div id="total"> </div> </td>
+        </tr>
+    
         <tr>
           <td><center> <input type="submit" /> </center></td>
           <td><center> <input type="reset" /> </center></td>

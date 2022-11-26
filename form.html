@@ -1,22 +1,25 @@
 <!DOCTYPE HTML> 
 <html>
-  <head> <script>
+  <head> 
     <title> Lesson Request Form </title>
-    function calcTotal()
-    {
-      numberLessons = parseInt(document.getElementById("numberLessons").value);
-      if (document.getElementById("private").checked==true)
+    <script>
+	    function calcTotal()
       {
-        total = numberLessons * 60;
+          lessonOfLessons = parseFloat(document.getElementById("numberLessons").value);
+          if (document.getElementById("private").checked == true)
+          {
+              PRIVATE = 60;
+              total = lessonOfLessons * PRIVATE;
+          }
+          else if (document.getElementById("group").checked == true)
+          {
+              GROUP = 20;
+              total = lessonOfLessons * GROUP;
+          }
+        str = "Current total is $" + total + ".";
+        document.getElementById("results").innerHTML = str;
       }
-      else
-      {
-        total = numberLessons * 20;
-      }
-      str = "Total is $" + total + ".";
-      document.getElementById("total").innerHTML = str;
-    }
-  </script>
+    </script>
   </head> 
   
   <body>
@@ -90,12 +93,12 @@
         
         <tr>
           <td> Number of lessons requesting: </td>
-          <td> <input type="text" id="numberLessons"  name="numberLessons" /> </td>
+          <td> <input type="text" id="numberLessons" /> </td>
         </tr>
     
         <tr>
-            <td> <input type="button" value="Calculate" onclick="calcTotal();" /></td>
-            <td> <div id="total"> </div> </td>
+          <td> <center> <input type="button" value="Calculate" onclick="calcTotal();" /> </center> </td>
+          <td> <center> <div id="results"> </div> </center> </td>
         </tr>
     
         <tr>

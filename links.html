@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+
+<!-- 11/13/2022
+John Tran
+CSCI434 - Web Programming
+This will serve as the index page of my website.  My initial thought is to have it a webpage dedicated to offering tennis lessons. -->
+
+<html>
+<head>
+	<title>Project: John's Tennis Lessons</title>
+	<h1><center>Welcome to John's Tennis Lessons!</center></h1>
+    <link rel="stylesheet" href="styles.css">
+    <br>
+</head>
+	
+<body>
+    <header id="header"></header>
+    <nav id="nav">
+        <ul>
+            <li><a href="trueindex.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="tutorials2.html">Tutorials</a></li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="forms2.html">Lesson Request Form</a></li>
+            <li><a href="customer_feedback.html">Customer Feedback Form</a></li>
+        </ul>
+    </nav>
+	
+	<h2> Here are some links that I visit often! </h2>
+		
+	<table border=3>
+		<tr>
+			<th>Link</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td> <a href="https://www.tennis-warehouse.com/"> Tennis Warehouse </a></td>
+			<td> Website to purchase tennis racquests, equipment, clothing, etc... </td>
+		</tr>
+		<tr>
+			<td> <a href="https://www.tennisworldusa.org/"> Tennis World USA </a></td>
+			<td> Website to check up on the latest news in the tennis world </td>
+		</tr>
+		<tr>
+			<td> <a href="https://www.youtube.com/c/EssentialTennis"> Essential Tennis YouTube </td>
+			<td> YouTube Channel with instructional videos on how to improve </td>
+		</tr>	
+	</table>
+
+    <script>
+        const nav = document.querySelector('#nav');
+        let navTop = nav.offsetTop;
+
+        function fixedNav() {
+        if (window.scrollY >= navTop) {    
+            nav.classList.add('fixed');
+        } else {
+            nav.classList.remove('fixed');    
+        }
+        }
+
+        window.addEventListener('scroll', fixedNav);
+    </script>
+
+</body>
+
+</html>

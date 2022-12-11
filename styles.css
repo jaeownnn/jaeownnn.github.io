@@ -1,39 +1,10 @@
-/* Style the navbar */
-#navbar {
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  /* Navbar links */
-  #navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px;
-    text-decoration: none;
-  }
-  
-  /* Page content */
-  .content {
-    padding: 16px;
-  }
-  
-  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  
-  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-  .sticky + .content {
-    padding-top: 60px;
-  }
-
   body {
     background-color: black;
+  }
 
+  article {
+    max-width: 760px;
+    margin: auto;
   }
 
   p {
@@ -45,8 +16,9 @@
   }
 
   h2 {
-    color: green;
-
+    background-color: green;
+    color: white;
+    margin: 5px;
   }
 
   table {
@@ -55,4 +27,82 @@
 
   ol {
     color: green;
+    list-style-position: inside;
+  }
+
+  #header {
+    height: 30vh;
+    background: url(tennis_header.jpg);
+    background-size: cover;
+  }
+
+  #nav {
+    background-color: rgb(36, 33, 33);
+    top: 0;
+    width: 100%;
+  }
+
+  #nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+
+  #nav li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #nav ul li a {
+    color: rgb(255, 255, 255);
+    transition: all 0.4s;
+  }
+
+  #nav ul li img {
+    height: 96px;
+    transition: height 0.4s;
+  }
+
+  #nav.fixed {
+    position: fixed;
+    box-shadow: 5px 5px 19px 0px rgba(78, 150, 102, 0.5);
+  }
+  #nav.fixed ul li img {
+    height: 30px;
+  }
+  #nav.fixed ul li a {
+    font-size: 18px;
+  }
+
+  img {
+    float: right;
+    margin: 5px;
+    border: 5px solid rgba(78, 150, 102, 0.5);
+  }
+
+  #fhand {
+    float: right;
+    height: auto;
+    width: auto;
+    max-height: 300px;
+    max-width: 300px;
+    border: 5px solid rgba(78, 150, 102, 0.5);
+
+  }
+
+  #bhand {
+    float: left;
+    height: auto;
+    width: auto;
+    max-height: 300px;
+    max-width: 300px;
+    border: 5px solid rgba(78, 150, 102, 0.5);
+    margin: 10px;
+  }
+
+  #tutvids {
+    position: center;
   }

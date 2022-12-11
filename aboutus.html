@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+
+<!-- 11/13/2022
+John Tran
+CSCI434 - Web Programming
+This will serve as the index page of my website.  My initial thought is to have it a webpage dedicated to offering tennis lessons. -->
+
+<html>
+<head>
+	<title>Project: John's Tennis Lessons</title>
+	<h1><center>Welcome to John's Tennis Lessons!</center></h1>
+    <link rel="stylesheet" href="styles.css">
+    <br>
+</head>
+	
+<body>
+    <header id="header"></header>
+    <nav id="nav">
+        <ul>
+            <li><a href="trueindex.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="tutorials2.html">Tutorials</a></li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="forms2.html">Lesson Request Form</a></li>
+            <li><a href="customer_feedback.html">Customer Feedback Form</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        <h2>Who am I?</h2>
+        <p> I am John and I have over 14 years of experience playing tennis.  Although I only started playing tennis when I reached my senior year of high 
+            school, I learned quickly and was able to secure a spot playing on the varsity team.  Since then, I have been continuously learning and improving.  
+            Ultimately, I am here to pass on my skill and experience.  Whether you are just a beginner hoping to get started playing tennis or you're already a 
+            veteran looking to take your game to the next level, I believe I have the resources and experience to help you achieve your goals.  I have training 
+            plans available that I can pare and tailor to your individual needs after a short consultation, free of charge! I offer both private lessons, one on 
+            one, or group lessons if you prefer to bring along a friend. 
+        </p>  
+    </div>
+    
+    <div> 
+        <h2> Personal Bio - A little bit about me! </h2>
+        <p> My name is John and I am currently serving Active Duty in the United States Air Force.  I am currently stationed overseas in Japan.  
+            I initially signed a four year contract and intended to use the GI Bill to return to school.  
+            However, halfway through my contract, I was notified of a short tour assignment to Turkey with a follow-on assignment to Japan after.  
+            I thought to myself there probably wouldn't be another opportunity for myself to experience and live in Japan, so I decided to jump on the opportunity.  
+            Upon accepting the assignment, I had to extend my initial contract out another two and half years (about 30 months).
+        </p>
+        
+        <p>
+            Being stationed overseas, I currently attend Southwestern College online.  
+            I am majoring in Computer Science and will have about five classes remaining after I complete the current semester.  
+            Upon completing my undergraduate degree in CS, I am looking to apply for a medical school preparatory program in which I can study full time for two years, 
+            completing all the prerequisite courses for medical school, all the while still being paid as if I'm Active Duty.  
+            Upon completion of the program and acceptance to medical school (either private or the Uniformed Services University of the Health Sciences), 
+            I would be able to commission and continue serving as an officer and physician.  This is my end goal.
+        </p>
+    </div>
+    
+	
+    <script>
+        const nav = document.querySelector('#nav');
+        let navTop = nav.offsetTop;
+
+        function fixedNav() {
+        if (window.scrollY >= navTop) {    
+            nav.classList.add('fixed');
+        } else {
+            nav.classList.remove('fixed');    
+        }
+        }
+
+        window.addEventListener('scroll', fixedNav);
+    </script>
+
+</body>
+
+</html>

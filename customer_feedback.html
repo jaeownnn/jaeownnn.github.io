@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+
+<!-- 11/13/2022
+John Tran
+CSCI434 - Web Programming
+This will serve as the index page of my website.  My initial thought is to have it a webpage dedicated to offering tennis lessons. -->
+
+<html>
+<head>
+	<title>Project: John's Tennis Lessons</title>
+	<h1><center>Welcome to John's Tennis Lessons!</center></h1>
+    <link rel="stylesheet" href="styles.css">
+    <br>
+</head>
+	
+<body>
+    <header id="header"></header>
+    <nav id="nav">
+        <ul>
+            <li><a href="trueindex.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="tutorials2.html">Tutorials</a></li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="forms2.html">Lesson Request Form</a></li>
+            <li><a href="customer_feedback.html">Customer Feedback Form</a></li>
+        </ul>
+    </nav>
+
+    <div>
+      <h2> Customer Feedback Form</h2>
+      <p>Please use the form below to enter any comments! </p>
+      <br>
+
+      <script src="https://www.cognitoforms.com/f/seamless.js" data-key="xEmCyIDG506f8IVP-Asbzg" data-form="1"></script>
+  
+    </div>
+
+    <script>
+        const nav = document.querySelector('#nav');
+        let navTop = nav.offsetTop;
+
+        function fixedNav() {
+        if (window.scrollY >= navTop) {    
+            nav.classList.add('fixed');
+        } else {
+            nav.classList.remove('fixed');    
+        }
+        }
+
+        window.addEventListener('scroll', fixedNav);
+    </script>
+
+</body>
+
+</html>

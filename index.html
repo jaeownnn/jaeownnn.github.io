@@ -1,39 +1,31 @@
 <!DOCTYPE HTML>
 
-<!-- 11/13/2022
-John Tran
-CSCI434 - Web Programming
-This will serve as the index page of my website.  My initial thought is to have it a webpage dedicated to offering tennis lessons. -->
-
 <html>
 <head>
 	<title>Project: John's Tennis Lessons</title>
 	<h1><center>Welcome to John's Tennis Lessons!</center></h1>
     <link rel="stylesheet" href="styles.css">
-    <center>
-        <img src="tennis_header.jpg">
-    </center>
     <br>
-
 </head>
 	
 <body>
-    <header>
-        <div id="navbar">
-            <a href="index.html">Home</a>
-            <a href="#aboutus">About Us</a>
-            <a href="tutorials2.html">Tutorials</a>
-            <a href="#link">Links</a>
-            <a href="forms2.html">Lesson Request Form</a>
-        </div>
-    </header>
+    <header id="header"></header>
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="tutorials2.html">Tutorials</a></li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="forms2.html">Lesson Request Form</a></li>
+            <li><a href="customer_feedback.html">Customer Feedback Form</a></li>
+        </ul>
+    </nav>
+    <br>
 
-<!-- Body content which consists of the main text to be displayed to the when enter the website -->
-	<p> Hello newcomers! </p>
-    
     <div> 
         <h2>What is Tennis?</h2>
-        <p>Tennis is a racquet sport that can either involve two players facing off, called singles, or a team of 2 players versus another team of 2 players, 
+
+        <p><img src="tennis_court_size.png">Tennis is a racquet sport that can either involve two players facing off, called singles, or a team of 2 players versus another team of 2 players, 
         called doubles.  The tennis court spans roughly 23.77m in length, while the width is dependent on if it is a singles match or doubles: singles will 
         have a width of 8.23m, while doubles will have a width of 10.97m.  Each side will alternate serving where they need to aim and place the ball within 
         the opponent's service box.  While serving, the player must keep both feet behind the baseline.  The player will have two attempts to serve the ball 
@@ -53,9 +45,7 @@ This will serve as the index page of my website.  My initial thought is to have 
         due to the +2 points rule.  Whoever wins the tiebreak will win the set with a score of 7 games to 6 games in the set.  To win a match of tennis, a 
         player will usually have to win 2-3 sets (Professional men's tour play a best of 5, while the professional women's tour plays a best of 3).  
         </p>
-	    
-	<center> <img src="tennis_court_size.png"> </center>
-	    
+
     </div>
 
     <div>
@@ -69,48 +59,21 @@ This will serve as the index page of my website.  My initial thought is to have 
         </p>
     </div>
 
-    	<!-- 11/20/2022 - Unit 2.
-	Two paragraphs of text about me -->
-    <p><b>A Little Bit About Me.</b> My name is John and I am currently serving Active Duty in the United States Air Force.  I am currently stationed overseas in Japan.  
-	I initially signed a four year contract and intended to use the GI Bill to return to school.  
-	However, halfway through my contract, I was notified of a short tour assignment to Turkey with a follow-on assignment to Japan after.  
-	I thought to myself there probably wouldn't be another opportunity for myself to experience and live in Japan, so I decided to jump on the opportunity.  
-	Upon accepting the assignment, I had to extend my initial contract out another two and half years (about 30 months).
-	</p>
+    <script>
+        const nav = document.querySelector('#nav');
+        let navTop = nav.offsetTop;
 
-	<p>
-	Being stationed overseas, I currently attend Southwestern College online.  
-	I am majoring in Computer Science and will have about five classes remaining after I complete the current semester.  
-	Upon completing my undergraduate degree in CS, I am looking to apply for a medical school preparatory program in which I can study full time for two years, 
-	completing all the prerequisite courses for medical school, all the while still being paid as if I'm Active Duty.  
-	Upon completion of the program and acceptance to medical school (either private or the Uniformed Services University of the Health Sciences), 
-	I would be able to commission and continue serving as an officer and physician.  This is my end goal.
-	</p>
-	
-	<!-- 11/20/2022 - Unit 2
-	Three links to websites that relate to tennis.  Used table to help organize and display link and description -->
-	<p> Here are some links that I visit often! </p>
-		
-	<table border=3>
-		<tr>
-			<th>Link</th>
-			<th>Description</th>
-		</tr>
-		<tr>
-			<td> <a href="https://www.tennis-warehouse.com/"> Tennis Warehouse </a></td>
-			<td> Website to purchase tennis racquests, equipment, clothing, etc... </td>
-		</tr>
-		<tr>
-			<td> <a href="https://www.tennisworldusa.org/"> Tennis World USA </a></td>
-			<td> Website to check up on the latest news in the tennis world </td>
-		</tr>
-		<tr>
-			<td> <a href="https://www.youtube.com/c/EssentialTennis"> Essential Tennis YouTube </td>
-			<td> YouTube Channel with instructional videos on how to improve </td>
-		</tr>	
-	</table>
-	
-	
+        function fixedNav() {
+        if (window.scrollY >= navTop) {    
+            nav.classList.add('fixed');
+        } else {
+            nav.classList.remove('fixed');    
+        }
+        }
+
+        window.addEventListener('scroll', fixedNav);
+    </script>
+
 </body>
 
 </html>
